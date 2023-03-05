@@ -1,0 +1,158 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik',
+    sans-serif;
+}
+
+.responsive {
+  background: radial-gradient(#a3faa3, #339670);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.digitalClock {
+  width: 100px;
+  height: 50px;
+  background: radial-gradient(#ff0202, #2d1500);
+  margin: 0 auto;
+  margin-bottom: 25px;
+  border: 2px solid gold;
+  border-radius: 30%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  /* background: radial-gradient(#cfeeff, #cab3ca); */
+  background: url(../image/pigeon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 3px solid gold;
+  position: relative;
+}
+
+.clock .num {
+  font-size: 21px;
+  color: #b35900;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: #c1f0de15; */
+  text-align: center;
+  --rotation: 0;
+  /* transform: rotate(30deg); */
+  transform: rotate(var(--rotation));
+}
+
+.clock .num1 {
+  --rotation: 30deg
+}
+
+.clock .num2 {
+  --rotation: 60deg
+}
+
+.clock .num3 {
+  --rotation: 90deg
+}
+
+.clock .num4 {
+  --rotation: 120deg
+}
+
+.clock .num5 {
+  --rotation: 150deg
+}
+
+.clock .num6 {
+  /* transform-origin: center; */
+  --rotation: 180deg
+}
+
+.clock .num7 {
+  --rotation: 210deg
+}
+
+.clock .num8 {
+  --rotation: 240deg
+}
+
+.clock .num9 {
+  --rotation: 270deg
+}
+
+.clock .num10 {
+  --rotation: 300deg
+}
+
+.clock .num11 {
+  --rotation: 330deg
+}
+
+.clock .num12 {
+  --rotation: 360deg
+}
+
+.clock::after {
+  content: "";
+  width: 21px;
+  height: 21px;
+  border-radius: 100%;
+  background: radial-gradient(#8c2020, #2d1500);
+  border: 1px solid gold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.clock .hand {
+  background-color: #000;
+  /* width: 10px;
+  height: 50%; */
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid #b35900;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transform-origin: bottom;
+  z-index: 10;
+  --rotation: 0;
+  transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
+}
+
+.clock .hand.second {
+  width: 3px;
+  height: 43.3%;
+  background-color: #ff0303;
+  border: 1px solid gold;
+}
+
+.clock .hand.minute {
+  width: 7px;
+  height: 37%;
+  background: radial-gradient(#8c2020, #2d1500);
+    border: 1px solid gold;
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 27%;
+  background: radial-gradient(#8c2020, #2d1500);
+    border: 1px solid gold;
+}
